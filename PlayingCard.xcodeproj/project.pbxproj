@@ -12,6 +12,8 @@
 		92734D981FC9B5B80050FF35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92734D961FC9B5B80050FF35 /* Main.storyboard */; };
 		92734D9A1FC9B5B80050FF35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92734D991FC9B5B80050FF35 /* Assets.xcassets */; };
 		92734D9D1FC9B5B80050FF35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92734D9B1FC9B5B80050FF35 /* LaunchScreen.storyboard */; };
+		92734DA61FC9B60E0050FF35 /* PlayingCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92734DA51FC9B60E0050FF35 /* PlayingCard.swift */; };
+		92734DA81FC9B91E0050FF35 /* PlayingCardDeck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92734DA71FC9B91E0050FF35 /* PlayingCardDeck.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		92734D991FC9B5B80050FF35 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		92734D9C1FC9B5B80050FF35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		92734D9E1FC9B5B80050FF35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92734DA51FC9B60E0050FF35 /* PlayingCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingCard.swift; sourceTree = "<group>"; };
+		92734DA71FC9B91E0050FF35 /* PlayingCardDeck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingCardDeck.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +58,24 @@
 		92734D911FC9B5B80050FF35 /* PlayingCard */ = {
 			isa = PBXGroup;
 			children = (
-				92734D921FC9B5B80050FF35 /* AppDelegate.swift */,
 				92734D941FC9B5B80050FF35 /* ViewController.swift */,
 				92734D961FC9B5B80050FF35 /* Main.storyboard */,
 				92734D991FC9B5B80050FF35 /* Assets.xcassets */,
-				92734D9B1FC9B5B80050FF35 /* LaunchScreen.storyboard */,
+				92734DA51FC9B60E0050FF35 /* PlayingCard.swift */,
+				92734DA71FC9B91E0050FF35 /* PlayingCardDeck.swift */,
+				92734DA41FC9B5D90050FF35 /* Supporting Files */,
 				92734D9E1FC9B5B80050FF35 /* Info.plist */,
 			);
 			path = PlayingCard;
+			sourceTree = "<group>";
+		};
+		92734DA41FC9B5D90050FF35 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				92734D921FC9B5B80050FF35 /* AppDelegate.swift */,
+				92734D9B1FC9B5B80050FF35 /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -91,7 +105,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0910;
-				LastUpgradeCheck = 0910;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Ankur Oberoi";
 				TargetAttributes = {
 					92734D8E1FC9B5B80050FF35 = {
@@ -137,6 +151,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				92734D951FC9B5B80050FF35 /* ViewController.swift in Sources */,
+				92734DA81FC9B91E0050FF35 /* PlayingCardDeck.swift in Sources */,
+				92734DA61FC9B60E0050FF35 /* PlayingCard.swift in Sources */,
 				92734D931FC9B5B80050FF35 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -177,6 +193,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -184,6 +201,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -234,6 +252,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -241,6 +260,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
