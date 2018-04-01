@@ -16,6 +16,21 @@ class PlayingCardView: UIView {
     @IBInspectable var suit: String = "♣️" { didSet { setNeedsDisplay(); setNeedsLayout() } }
     @IBInspectable var isFaceUp: Bool = true { didSet { setNeedsDisplay(); setNeedsLayout() } }
     
+    var faceCardScale: CGFloat = SizeRatio.faceCardImageSizeToBoundsSize {
+        didSet {
+            setNeedsDisplay()
+        }
+    }
+    
+    @objc func adjustFaceCardScale(byHandlingGestureRecognizedBy recognizer: UIPinchGestureRecognizer) {
+        switch recognizer.state {
+        case .changed, .ended:
+            faceCardScale *= recognizer.scale
+            recognizer.scale = 1.0
+        default: break
+        }
+    }
+    
     private func centeredAttributedString(_ string: String, fontSize: CGFloat) -> NSAttributedString {
         var font = UIFont.preferredFont(forTextStyle: .body).withSize(fontSize)
         // this is a technique for taking a "normal" font, and allowing the system's accessibility controls to scale it
@@ -135,7 +150,7 @@ class PlayingCardView: UIView {
         
         if isFaceUp {
             if let faceCardImage = UIImage(named: rankString + suit, in: Bundle(for: self.classForCoder), compatibleWith: traitCollection) {
-                faceCardImage.draw(in: bounds.zoom(by: SizeRatio.faceCardImageSizeToBoundsSize))
+                faceCardImage.draw(in: bounds.zoom(by: faceCardScale))
             } else {
                 drawPips()
             }
