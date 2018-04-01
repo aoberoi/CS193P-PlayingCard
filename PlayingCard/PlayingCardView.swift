@@ -10,8 +10,8 @@ import UIKit
 
 class PlayingCardView: UIView {
     
-    var rank: Int = 5 { didSet { setNeedsDisplay(); setNeedsLayout() } }
-    var suit: String = "♥️" { didSet { setNeedsDisplay(); setNeedsLayout() } }
+    var rank: Int = 11 { didSet { setNeedsDisplay(); setNeedsLayout() } }
+    var suit: String = "♣️" { didSet { setNeedsDisplay(); setNeedsLayout() } }
     var isFaceUp: Bool = true { didSet { setNeedsDisplay(); setNeedsLayout() } }
     
     private func ceneteredAttributedString(_ string: String, fontSize: CGFloat) -> NSAttributedString {
@@ -92,6 +92,9 @@ class PlayingCardView: UIView {
         UIColor.white.setFill()
         roundedRect.fill()
         
+        if let faceCardImage = UIImage(named: rankString + suit) {
+            faceCardImage.draw(in: bounds.zoom(by: SizeRatio.faceCardImageSizeToBoundsSize))
+        }
     }
 }
 
