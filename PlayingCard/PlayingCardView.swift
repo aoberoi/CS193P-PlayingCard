@@ -12,7 +12,7 @@ class PlayingCardView: UIView {
     
     var rank: Int = 3 { didSet { setNeedsDisplay(); setNeedsLayout() } }
     var suit: String = "♣️" { didSet { setNeedsDisplay(); setNeedsLayout() } }
-    var isFaceUp: Bool = true { didSet { setNeedsDisplay(); setNeedsLayout() } }
+    var isFaceUp: Bool = false { didSet { setNeedsDisplay(); setNeedsLayout() } }
     
     private func centeredAttributedString(_ string: String, fontSize: CGFloat) -> NSAttributedString {
         var font = UIFont.preferredFont(forTextStyle: .body).withSize(fontSize)
@@ -131,10 +131,16 @@ class PlayingCardView: UIView {
         UIColor.white.setFill()
         roundedRect.fill()
         
-        if let faceCardImage = UIImage(named: rankString + suit) {
-            faceCardImage.draw(in: bounds.zoom(by: SizeRatio.faceCardImageSizeToBoundsSize))
+        if isFaceUp {
+            if let faceCardImage = UIImage(named: rankString + suit) {
+                faceCardImage.draw(in: bounds.zoom(by: SizeRatio.faceCardImageSizeToBoundsSize))
+            } else {
+                drawPips()
+            }
         } else {
-            drawPips()
+            if let cardBackImage = UIImage(named: "cardback") {
+                cardBackImage.draw(in: bounds)
+            }
         }
     }
 }
