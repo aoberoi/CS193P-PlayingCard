@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9265969B2071607700FF446D /* PlayingCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9265969A2071607700FF446D /* PlayingCardView.swift */; };
 		92734D931FC9B5B80050FF35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92734D921FC9B5B80050FF35 /* AppDelegate.swift */; };
 		92734D951FC9B5B80050FF35 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92734D941FC9B5B80050FF35 /* ViewController.swift */; };
 		92734D981FC9B5B80050FF35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92734D961FC9B5B80050FF35 /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9265969A2071607700FF446D /* PlayingCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingCardView.swift; sourceTree = "<group>"; };
 		92734D8F1FC9B5B80050FF35 /* PlayingCard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlayingCard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92734D921FC9B5B80050FF35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92734D941FC9B5B80050FF35 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -59,10 +61,11 @@
 			isa = PBXGroup;
 			children = (
 				92734D941FC9B5B80050FF35 /* ViewController.swift */,
+				9265969A2071607700FF446D /* PlayingCardView.swift */,
 				92734D961FC9B5B80050FF35 /* Main.storyboard */,
-				92734D991FC9B5B80050FF35 /* Assets.xcassets */,
 				92734DA51FC9B60E0050FF35 /* PlayingCard.swift */,
 				92734DA71FC9B91E0050FF35 /* PlayingCardDeck.swift */,
+				92734D991FC9B5B80050FF35 /* Assets.xcassets */,
 				92734DA41FC9B5D90050FF35 /* Supporting Files */,
 				92734D9E1FC9B5B80050FF35 /* Info.plist */,
 			);
@@ -153,6 +156,7 @@
 				92734D951FC9B5B80050FF35 /* ViewController.swift in Sources */,
 				92734DA81FC9B91E0050FF35 /* PlayingCardDeck.swift in Sources */,
 				92734DA61FC9B60E0050FF35 /* PlayingCard.swift in Sources */,
+				9265969B2071607700FF446D /* PlayingCardView.swift in Sources */,
 				92734D931FC9B5B80050FF35 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
